@@ -1,7 +1,7 @@
 version: '3.9'
 
 services:
-  postgres2:
+  postgres1:
     image: postgres:13
     environment:
       POSTGRES_DB: server1_db
@@ -24,7 +24,7 @@ services:
     ports:
       - "8081:8081"
     depends_on:
-      postgres4:
+      postgres1:
         condition: service_healthy
 
 volumes:
